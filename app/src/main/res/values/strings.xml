@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Spacing</string>
+    <string name="hey">Hey !</string>
+    <string name="what_are_you_looking_upto">What are you looking upto</string>
+    <string name="home_search">Home Search</string>
+    <string name="buy_rent_and_pg_co_living">Buy, Rent and PG/Co-Living</string>
+    <string name="post_your_property">Post Your Property</string>
+    <string name="sell_or_rent_out_your_home">Sell or Rent out your home</string>
+    <string name="skip">Skip</string>
+    <string name="explore_latest_properties">Explore Latest Properties</string>
+    <string name="checkout_resale_new_projects"><![CDATA[Check out Rent, Resale & New Projects]]></string>
+    <string name="explore_neighbourhood">Explore Neighbourhood</string>
+    <string name="park_hospital_atms_gyms_malls_and_much_more">Park, Hospital, ATMs, Gyms, Malls and much more</string>
+    <string name="share_your_details_interest_to_instantly_close_the_deal"><![CDATA[Share your details & interest to instantly close the deal]]></string>
+    <string name="instantly_connect_with_sellers">Instantly Connect with Sellers</string>
+    <string name="verify_your_number">Verify Your Number</string>
+    <string name="mobilecode_india">+91</string>
+    <string name="enter_your_number">Enter your number</string>
+    <string name="tell_is_your_requirements">Tell is your requirements!</string>
+    <string name="rent">Rent</string>
+    <string name="no_string_attached">No string attached</string>
+    <string name="buy">Buy</string>
+    <string name="pg_co_living">PG/Co-living</string>
+    <string name="be_a_proud_owner">Be a proud owner</string>
+    <string name="freinds_and_freedom">Freinds and freedom</string>
+    <string name="i_m_looking_for">I\'m looking for</string>
+</resources>

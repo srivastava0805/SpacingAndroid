@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_orange"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_verifynumber_viewhalf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_25dp"
+        android:src="@drawable/spacing_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_25dp"
+        android:layout_marginEnd="@dimen/default_16dp"
+        android:text="@string/skip"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_default_20sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_verifynumber_viewhalf"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_verifynumber_viewverifynumbertop"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_verifynumber_viewverifynumberbottom"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:elevation="@dimen/default_4dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".80" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_16dp"
+        android:layout_marginEnd="@dimen/default_16dp"
+        android:background="@drawable/curved_corner_card"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_verifynumber_viewverifynumberbottom"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_verifynumber_viewverifynumbertop">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_verifynumber_explorelatest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_30dp"
+            android:padding="@dimen/default_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_verifynumber_explore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:src="@drawable/explore"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_verifynumber_explorelatest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/explore_latest_properties"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_verifynumber_explore"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_lookingfor_buyrentpg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/checkout_resale_new_projects"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_verifynumber_explore"
+                app:layout_constraintTop_toBottomOf="@+id/textview_verifynumber_explorelatest" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_verifynumber_exploreneighbourhood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_30dp"
+            android:padding="@dimen/default_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintlayout_verifynumber_explorelatest">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_verifynumber_exploreneighourbourhood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:src="@drawable/neighbourhood"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_verifynumber_exploreneighourbourhood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/explore_neighbourhood"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_verifynumber_exploreneighourbourhood"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_verifynumber_parkmalls"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/park_hospital_atms_gyms_malls_and_much_more"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textview_verifynumber_exploreneighourbourhood"
+                app:layout_constraintTop_toBottomOf="@+id/textview_verifynumber_exploreneighourbourhood" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_verifynumber_instantlyconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_30dp"
+            android:padding="@dimen/default_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintlayout_verifynumber_exploreneighbourhood">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_verifynumber_instantlyconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:src="@drawable/connect"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_verifynumber_instantlyconnec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/instantly_connect_with_sellers"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_verifynumber_instantlyconnect"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_verifynumber_shareyourdetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/share_your_details_interest_to_instantly_close_the_deal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textview_verifynumber_instantlyconnec"
+                app:layout_constraintTop_toBottomOf="@+id/textview_verifynumber_instantlyconnec" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/default_8dp"
+            android:layout_marginEnd="@dimen/default_8dp"
+            android:background="@color/light_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/textview_verifynumber_verifyyournumber"
+            app:layout_constraintEnd_toStartOf="@+id/textview_verifynumber_verifyyournumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textview_verifynumber_verifyyournumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_verifynumber_verifyyournumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_12dp"
+            android:text="@string/verify_your_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintlayout_verifynumber_instantlyconnect" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/default_8dp"
+            android:layout_marginEnd="@dimen/default_8dp"
+            android:background="@color/light_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/textview_verifynumber_verifyyournumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textview_verifynumber_verifyyournumber"
+            app:layout_constraintTop_toTopOf="@+id/textview_verifynumber_verifyyournumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_verifynumber_mobilecode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_25dp"
+            android:background="@color/light_gray"
+            android:padding="@dimen/default_8dp"
+            android:text="@string/mobilecode_india"
+            android:textSize="@dimen/textsize_default_20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_verifynumber_verifyyournumber" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edittext_verifynumber_mobilenumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/default_20dp"
+            android:layout_marginEnd="@dimen/default_30dp"
+            android:background="@drawable/editext_nocurved_corners"
+            android:hint="@string/enter_your_number"
+            android:padding="@dimen/default_10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textview_verifynumber_mobilecode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textview_verifynumber_mobilecode"
+            app:layout_constraintTop_toTopOf="@+id/textview_verifynumber_mobilecode" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_50dp"
+            android:layout_margin="@dimen/default_16dp"
+            android:background="@drawable/background_orange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_verifynumber_mobilenumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

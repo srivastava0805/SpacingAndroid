@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_tellusrequirement_topview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/home_background"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_tellusrequirement_viewhalf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/default_45dp"
+        android:text="@string/tell_is_your_requirements"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_default_28sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintBottom_toBottomOf="@+id/view_tellusrequirement_topview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_tellusrequirement_topview" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_tellusrequirement_viewhalf"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_tellusrequirement_viewlookingfortop"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_tellusrequirement_viewlookingforbottom"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:elevation="@dimen/default_4dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".85" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_16dp"
+        android:layout_marginEnd="@dimen/default_16dp"
+        android:padding="@dimen/default_16dp"
+        android:background="@drawable/curved_corner_card"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_tellusrequirement_viewlookingforbottom"
+        app:layout_constraintTop_toBottomOf="@+id/guideline_tellusrequirement_viewlookingfortop">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_tellusrequirement_lookingfor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/i_m_looking_for"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default_20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_tellusrequirement_rent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_10dp"
+            android:padding="@dimen/default_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_tellusrequirement_lookingfor">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_tellusrequirement_rent"
+                android:layout_width="@dimen/default_60dp"
+                android:layout_height="@dimen/default_60dp"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:src="@drawable/rent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_tellusrequirement_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:layout_marginTop="@dimen/default_10dp"
+                android:text="@string/rent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_tellusrequirement_rent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_tellusrequirement_nostringsattached"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/no_string_attached"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_16sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_tellusrequirement_rent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_tellusrequirement_rent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_tellusrequirement_buy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_10dp"
+            android:padding="@dimen/default_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintlayout_tellusrequirement_rent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_tellusrequirement_buy"
+                android:layout_width="@dimen/default_60dp"
+                android:layout_height="@dimen/default_60dp"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:src="@drawable/buy"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_tellusrequirement_beaproudowner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/buy"
+                android:layout_marginTop="@dimen/default_10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_tellusrequirement_buy"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_verifynumber_parkmalls"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/be_a_proud_owner"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textview_tellusrequirement_beaproudowner"
+                app:layout_constraintTop_toBottomOf="@+id/textview_tellusrequirement_beaproudowner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_tellusrequirement_pgcoliving"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_10dp"
+            android:padding="@dimen/default_8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintlayout_tellusrequirement_buy">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_tellusrequirement_pgcoliving"
+                android:layout_width="@dimen/default_60dp"
+                android:layout_height="@dimen/default_60dp"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:src="@drawable/pg_coliving"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_tellusrequirement_pgcoliving"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/pg_co_living"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                android:layout_marginTop="@dimen/default_10dp"
+                app:layout_constraintStart_toEndOf="@+id/imageview_tellusrequirement_pgcoliving"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_tellusrequirement_freindsandfreedom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/freinds_and_freedom"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textview_tellusrequirement_pgcoliving"
+                app:layout_constraintTop_toBottomOf="@+id/textview_tellusrequirement_pgcoliving" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/curved_white_top"
+        android:paddingStart="@dimen/default_25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_card_lookingfor"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_text_hey"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_lookingfor_hey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hey"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default_24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_text_hey" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_lookingfor_whatareyouupto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_16dp"
+            android:text="@string/what_are_you_looking_upto"
+            android:textSize="@dimen/textsize_default_20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_lookingfor_hey" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_lookingfor_homesearchparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_lookingfor_whatareyouupto">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_lookingfor_buyrentpg"
+                android:layout_width="@dimen/default_70dp"
+                android:layout_height="@dimen/default_70dp"
+                android:src="@drawable/home_search"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_lookingfor_homesearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/home_search"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_24sp"
+                app:layout_constraintBottom_toTopOf="@+id/textview_lookingfor_buyrentpg"
+                app:layout_constraintStart_toEndOf="@+id/imageview_lookingfor_buyrentpg" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_lookingfor_buyrentpg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:layout_marginBottom="@dimen/default_4dp"
+                android:text="@string/buy_rent_and_pg_co_living"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageview_lookingfor_buyrentpg"
+                app:layout_constraintStart_toEndOf="@+id/imageview_lookingfor_buyrentpg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayout_lookingfor_postpropertyparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageview_lookingfor_postproperty"
+                android:layout_width="@dimen/default_70dp"
+                android:layout_height="@dimen/default_70dp"
+                android:src="@drawable/post_your_propertie"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_lookingfor_postproperty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:text="@string/post_your_property"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_24sp"
+                app:layout_constraintBottom_toTopOf="@+id/textview_lookingfor_sellorrent"
+                app:layout_constraintStart_toEndOf="@+id/imageview_lookingfor_postproperty" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_lookingfor_sellorrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_25dp"
+                android:layout_marginBottom="@dimen/default_4dp"
+                android:text="@string/sell_or_rent_out_your_home"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default_20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageview_lookingfor_postproperty"
+                app:layout_constraintStart_toEndOf="@+id/imageview_lookingfor_postproperty" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_card_lookingfor"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
