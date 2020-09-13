@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_25dp"
         android:src="@drawable/spacing_white"
+        android:id="@+id/imageview_verifynumber_homelogo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,9 +61,10 @@
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/default_16dp"
         android:layout_marginEnd="@dimen/default_16dp"
+        android:paddingBottom="@dimen/default_16dp"
         android:background="@drawable/curved_corner_card"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_verifynumber_viewverifynumberbottom"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_verifynumber_viewverifynumbertop">
+        app:layout_constraintTop_toBottomOf="@+id/imageview_verifynumber_homelogo"
+        android:layout_marginTop="@dimen/default_16dp">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -258,6 +260,8 @@
             android:background="@drawable/background_orange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/submit"
+            android:textColor="@color/white"
             app:layout_constraintTop_toBottomOf="@+id/edittext_verifynumber_mobilenumber" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
