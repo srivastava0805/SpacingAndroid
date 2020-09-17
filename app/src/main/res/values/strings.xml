@@ -25,4 +25,13 @@
     <string name="freinds_and_freedom">Freinds and freedom</string>
     <string name="i_m_looking_for">I\'m looking for</string>
     <string name="submit">Submit</string>
+    <string name="looking_to_rent_in">Looking to Rent in</string>
+    <string name="select_city">Select City</string>
+    <string name="search_for_your_city_here">Search for your city here</string>
+    <string name="use_my_current_location">Use my current Location</string>
+    <string name="popular_cities">Popular Cities</string>
+    <string name="select_locality">Select Locality</string>
+    <string name="select_preferred_locality_or_landamrk">Select preferred Locality or Landamrk</string>
+    <string name="search_for_your_locality">Search for your Locality</string>
+    <string name="top_localities">Top Localities</string>
 </resources>
