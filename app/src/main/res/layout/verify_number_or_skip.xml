@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
     <View
         android:layout_width="match_parent"
@@ -46,7 +47,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".12" />
+        app:layout_constraintGuide_percent=".13" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_verifynumber_viewverifynumberbottom"
@@ -63,7 +64,7 @@
         android:layout_marginEnd="@dimen/default_16dp"
         android:paddingBottom="@dimen/default_16dp"
         android:background="@drawable/curved_corner_card"
-        app:layout_constraintTop_toBottomOf="@+id/imageview_verifynumber_homelogo"
+        app:layout_constraintTop_toTopOf="@+id/guideline_verifynumber_viewverifynumbertop"
         android:layout_marginTop="@dimen/default_16dp">
 
 
@@ -248,15 +249,20 @@
             android:background="@drawable/editext_nocurved_corners"
             android:hint="@string/enter_your_number"
             android:padding="@dimen/default_10dp"
+            android:maxLength="10"
+            android:inputType="phone"
             app:layout_constraintBottom_toBottomOf="@+id/textview_verifynumber_mobilecode"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textview_verifynumber_mobilecode"
             app:layout_constraintTop_toTopOf="@+id/textview_verifynumber_mobilecode" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_verifynumber_submit"
             android:layout_width="0dp"
             android:layout_height="@dimen/default_50dp"
             android:layout_margin="@dimen/default_16dp"
+            android:text="@string/submit"
+            android:textColor="@color/white"
             android:background="@drawable/background_orange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

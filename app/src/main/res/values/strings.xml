@@ -34,4 +34,16 @@
     <string name="select_preferred_locality_or_landamrk">Select preferred Locality or Landamrk</string>
     <string name="search_for_your_locality">Search for your Locality</string>
     <string name="top_localities">Top Localities</string>
+    <string name="select_budget">Select Budget</string>
+    <string name="total_properties_2_4k">Total Properties: 2.4K</string>
+    <string name="select_your_budget">Select your Budget</string>
+    <string name="next">Next</string>
+    <string name="_5k">5k</string>
+    <string name="_6k">6k</string>
+    <string name="select_configuration">Select Configuration</string>
+    <string name="_1rk">1Rk</string>
+    <string name="_1bhk">1BHK</string>
+    <string name="_2bhk">2Bhk</string>
+    <string name="_3bhk">3BHK</string>
+    <string name="view_properties">View Properties</string>
 </resources>

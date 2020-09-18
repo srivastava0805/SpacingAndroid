@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <View
+        android:id="@+id/view_tellusrequirement_topview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_orange"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_selectbudget_viewhalf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview_selectcity_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_25dp"
+        android:onClick="onBackClicked"
+        android:layout_marginStart="@dimen/default_25dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_selectbudget_selectbudget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_budget"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_default_24sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_selectbudget_selectbudgettop" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_selectbudget_totalProperties"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_10dp"
+        android:layout_marginEnd="@dimen/default_16dp"
+        android:text="@string/total_properties_2_4k"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_default_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_selectbudget_selectbudget" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_selectbudget_viewhalf"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_selectbudget_selectbudgettop"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".08" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_selectbudget_viewselectbudgettop"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_selectbudget_viewselectbudgetbottom"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:elevation="@dimen/default_4dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".75" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/default_16dp"
+        android:layout_marginEnd="@dimen/default_16dp"
+        android:background="@drawable/curved_corner_card"
+        android:padding="@dimen/default_16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_selectbudget_viewselectbudgetbottom"
+        app:layout_constraintTop_toTopOf="@+id/guideline_selectbudget_viewselectbudgettop">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textview_selectbudget_selectyourbudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_your_budget"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default_20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_selectbudget_budgetstartrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_5k"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textview_selectbudget_budgetendrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints"
+                android:text="@string/_5k"/>
+
+            <com.jem.rubberpicker.RubberRangePicker
+                android:id="@+id/rangeSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_30dp"
+                app:dampingRatio="0.3"
+                app:defaultThumbInsideColor="#FFF"
+                app:defaultThumbRadius="@dimen/default_16dp"
+                app:elasticBehavior="linear"
+                app:highlightDefaultThumbOnTouchColor="#F8850A"
+                app:highlightTrackColor="#FDA94F"
+                app:layout_constraintTop_toBottomOf="@+id/textview_selectbudget_budgetstartrange"
+                app:maxValue="99"
+                app:minValue="5"
+                app:normalTrackColor="#FAD4AC" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_selectbudget_next"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_50dp"
+            android:layout_margin="@dimen/default_16dp"
+            android:background="@drawable/background_orange"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
