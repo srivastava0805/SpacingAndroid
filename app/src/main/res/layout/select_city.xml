@@ -132,11 +132,14 @@
             app:layout_constraintTop_toBottomOf="@+id/textview_selectcity_usemylocation" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerview_selectcity_popularcities"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@+id/textview_selectcity_popularcities"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_margin="@dimen/default_25dp"/>
+            android:layout_marginStart="@dimen/default_25dp"
+            android:layout_marginTop="@dimen/default_5dp"
+            android:layout_marginEnd="@dimen/default_25dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

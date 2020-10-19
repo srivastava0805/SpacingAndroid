@@ -46,4 +46,8 @@
     <string name="_2bhk">2Bhk</string>
     <string name="_3bhk">3BHK</string>
     <string name="view_properties">View Properties</string>
+    <string name="places_api_key">AIzaSyBsICl5gNAOcocLPEuaBCU693xtZUryg9Ys</string>
+    <string name="mobile_number_empty">Mobile Number Must Not be empty</string>
+    <string name="mobile_number_length_smaller">Mobile number must be of 10 digits</string>
+    <string name="mobile_number_regex_not_valid">Mobile Number should start with 6,7,8 or 9</string>
 </resources>
