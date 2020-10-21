@@ -31,7 +31,7 @@
     <string name="use_my_current_location">Use my current Location</string>
     <string name="popular_cities">Popular Cities</string>
     <string name="select_locality">Select Locality</string>
-    <string name="select_preferred_locality_or_landamrk">Select preferred Locality or Landamrk</string>
+    <string name="select_preferred_locality_or_landamrk">Select preferred Locality or Landmark</string>
     <string name="search_for_your_locality">Search for your Locality</string>
     <string name="top_localities">Top Localities</string>
     <string name="select_budget">Select Budget</string>

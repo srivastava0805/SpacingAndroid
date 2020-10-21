@@ -84,6 +84,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+<!--        android:drawableEnd="@drawable/ic_mic"-->
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/edittext_selectcity_searchcity"
             android:layout_width="0dp"
@@ -93,7 +95,7 @@
             android:layout_marginEnd="@dimen/default_25dp"
             android:background="@drawable/curved_corner_gray_stroke"
             android:drawableStart="@drawable/ic_search"
-            android:drawableEnd="@drawable/ic_mic"
+
             android:drawablePadding="@dimen/default_10dp"
             android:paddingStart="@dimen/default_8dp"
             android:hint="@string/search_for_your_city_here"

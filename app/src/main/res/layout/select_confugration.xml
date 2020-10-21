@@ -81,7 +81,7 @@
         android:layout_height="1dp"
         android:elevation="@dimen/default_4dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".8" />
+        app:layout_constraintGuide_percent=".88" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

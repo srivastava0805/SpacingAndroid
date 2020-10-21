@@ -24,7 +24,6 @@ import com.spacing.Utils.LocationManager;
 import com.spacing.fragment.FragmentVerifyPhoneNumber;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -35,13 +34,10 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
     private String address;
     private String city;
     private GotUpdateLocationInterface getCityCallback;
-    private boolean updateCity;
-    private boolean updateLocality;
     private ProgressDialog loadingCityProgressBar;
     private String waitingMessage = "Please wait..";
     private String startBudget;
     private String endBudget;
-    private ArrayList<String> selectedConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +75,7 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) {
             if (grantResults.length > 0 &&
                     grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                LocationManager.getInstance().setLocationManagerInterface(this);
+                setProgressBarAndGetLocation();
             }
             boolean showRationale = shouldShowRequestPermissionRationale(permission);
             if (!showRationale && permission.equals(Manifest.permission.ACCESS_FINE_LOCATION)) {
@@ -149,12 +144,17 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
                         }
                     });
         } else {
-            loadingCityProgressBar = new ProgressDialog(this);
-            loadingCityProgressBar.setCancelable(true);
-            loadingCityProgressBar.setMessage(waitingMessage);
-            loadingCityProgressBar.show();
-            LocationManager.getInstance().setLocationManagerInterface(this);
+            setProgressBarAndGetLocation();
+
         }
+    }
+
+    private void setProgressBarAndGetLocation() {
+        loadingCityProgressBar = new ProgressDialog(this);
+        loadingCityProgressBar.setCancelable(true);
+        loadingCityProgressBar.setMessage(waitingMessage);
+        loadingCityProgressBar.show();
+        LocationManager.getInstance().setLocationManagerInterface(this);
     }
 
     public void setCity(String city) {

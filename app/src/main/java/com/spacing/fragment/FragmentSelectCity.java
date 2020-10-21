@@ -71,7 +71,7 @@ public class FragmentSelectCity extends Fragment {
 
     private void getDataForPopularCities() {
         apiInterface = APIClient.getClient().create(APIInterface.class);
-        /**
+        /**x
          GET  popular cities
          **/
         Call<List<PopularCitiesDataStructure>> call = apiInterface.doGetPopularCities();
@@ -104,8 +104,8 @@ public class FragmentSelectCity extends Fragment {
         mAdapter = new PopularPlacesAdapter(cities, new MainActivity.GotUpdateLocationInterface() {
             @Override
             public void onUpdated(String city) {
-                editTextMyCity.setText(city);
                 useFilter = false;
+                editTextMyCity.setText(city);
                 replaceToLocalityFragment();
             }
         });
@@ -120,6 +120,7 @@ public class FragmentSelectCity extends Fragment {
                     ((MainActivity) getActivity()).checkPermissionAndGetLocation(new MainActivity.GotUpdateLocationInterface() {
                         @Override
                         public void onUpdated(String city) {
+                            useFilter = false;
                             editTextMyCity.setText(city);
                             replaceToLocalityFragment();
                         }

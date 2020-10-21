@@ -159,6 +159,7 @@ public class FragmentSelectLocality extends Fragment {
             public void onClick(View view) {
                 if (((MainActivity) getActivity()).getLocality() == null) {
                     ((MainActivity) getActivity()).checkPermissionAndGetLocation(city -> {
+                        useFilter = false;
                         editTextMyLocality.setText(city);
                         replaceToLocalityFragment();
                     });
