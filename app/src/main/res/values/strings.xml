@@ -16,7 +16,7 @@
     <string name="verify_your_number">Verify Your Number</string>
     <string name="mobilecode_india">+91</string>
     <string name="enter_your_number">Enter your number</string>
-    <string name="tell_is_your_requirements">Tell is your requirements!</string>
+    <string name="tell_is_your_requirements">Tell us your requirements!</string>
     <string name="rent">Rent</string>
     <string name="no_string_attached">No string attached</string>
     <string name="buy">Buy</string>
@@ -50,4 +50,7 @@
     <string name="mobile_number_empty">Mobile Number Must Not be empty</string>
     <string name="mobile_number_length_smaller">Mobile number must be of 10 digits</string>
     <string name="mobile_number_regex_not_valid">Mobile Number should start with 6,7,8 or 9</string>
+    <string name="_3bhkplus">3Bhk+</string>
+    <string name="no_matching_property">No matching property found, Try again with different filters</string>
+    <string name="wait__">Please wait..</string>
 </resources>

@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.jem.rubberpicker.RubberRangePicker;
 import com.spacing.R;
+import com.spacing.activity.MainActivity;
 
 public class FragmentSelectBudget extends Fragment {
 
@@ -71,7 +72,9 @@ public class FragmentSelectBudget extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                ((MainActivity)getActivity()).setStartBudget(textStartRangeBudget.getText().toString().replace("k","00"));
+                ((MainActivity)getActivity()).setEndBudget(textEndRangeBudget.getText().toString().replace("k","00"));
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container_main, new FragmentSelectConfiguration());
                 fragmentTransaction.addToBackStack(null);

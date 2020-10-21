@@ -24,6 +24,7 @@ import com.spacing.Utils.LocationManager;
 import com.spacing.fragment.FragmentVerifyPhoneNumber;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -37,6 +38,10 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
     private boolean updateCity;
     private boolean updateLocality;
     private ProgressDialog loadingCityProgressBar;
+    private String waitingMessage = "Please wait..";
+    private String startBudget;
+    private String endBudget;
+    private ArrayList<String> selectedConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
 
     @Override
     public void onLocationUpdated(Object loc) {
-        Log.e("Location " , ""+loc);
+        Log.e("Location ", "" + loc);
 
 
         Location location = (Location) loc;
@@ -108,19 +113,24 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
         }
     }
 
-    public String getCityByLocation() {
+    public String getcity() {
         if (city != null)
             return city;
-        else
+        else {
+            waitingMessage = "Please wait Trying to get your city..";
             return null;
+        }
     }
 
-    public String getLocalityByLocation() {
+    public String getLocality() {
         if (address != null)
             return address;
-        else
+        else {
+            waitingMessage = "Please wait Trying to get your locality..";
             return null;
+        }
     }
+
 
     public void checkPermissionAndGetLocation(GotUpdateLocationInterface gotUpdateLocationInterface) {
         getCityCallback = gotUpdateLocationInterface;
@@ -139,13 +149,38 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
                         }
                     });
         } else {
-             loadingCityProgressBar = new ProgressDialog(this);
+            loadingCityProgressBar = new ProgressDialog(this);
             loadingCityProgressBar.setCancelable(true);
-            loadingCityProgressBar.setMessage("Please wait Trying to get your city..");
+            loadingCityProgressBar.setMessage(waitingMessage);
             loadingCityProgressBar.show();
             LocationManager.getInstance().setLocationManagerInterface(this);
         }
     }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setLocality(String locality) {
+        this.address = locality;
+    }
+
+    public void setEndBudget(String startBudget) {
+        this.startBudget = startBudget;
+    }
+
+    public void setStartBudget(String endBudget) {
+        this.endBudget = endBudget;
+    }
+
+    public String getStartBudget() {
+        return startBudget;
+    }
+
+    public String getEndBudget() {
+        return endBudget;
+    }
+
 
     public interface GotUpdateLocationInterface {
         void onUpdated(String city);

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightest_gray">
+
+    <Spinner
+        android:id="@+id/spinnner_viewproperties_bhk"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/default_40dp"
+        android:layout_marginStart="@dimen/default_12dp"
+        android:layout_marginTop="@dimen/default_25dp"
+        android:layout_marginEnd="@dimen/default_12dp"
+        android:background="@drawable/curved_corner_black_stroke"
+        app:layout_constraintEnd_toStartOf="@+id/spinnner_viewproperties_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnner_viewproperties_price"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/default_40dp"
+        android:layout_marginStart="@dimen/default_12dp"
+        android:layout_marginTop="@dimen/default_25dp"
+        android:layout_marginEnd="@dimen/default_12dp"
+        android:background="@drawable/curved_corner_black_stroke"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnner_viewproperties_bhk"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recylerview_viewProperties_properties"
+        android:layout_marginTop="@dimen/default_12dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/spinnner_viewproperties_bhk"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

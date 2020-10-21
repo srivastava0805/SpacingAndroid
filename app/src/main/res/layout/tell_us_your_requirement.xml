@@ -9,15 +9,24 @@
         android:id="@+id/view_tellusrequirement_topview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/home_background"
+        android:background="@drawable/background_orange"
         app:layout_constraintBottom_toTopOf="@+id/guideline_tellusrequirement_viewhalf"
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/default_100dp"
+        android:layout_height="@dimen/default_100dp"
+        android:src="@drawable/ic_home_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textview_tellusrequirement_tellusrequirement"/>
+
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textview_tellusrequirement_tellusrequirement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/default_45dp"
+        android:paddingTop="@dimen/default_25dp"
         android:text="@string/tell_is_your_requirements"
         android:textColor="@color/white"
         android:textSize="@dimen/textsize_default_28sp"

@@ -7,13 +7,16 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.spacing.PopularCitiesDataStructure;
 import com.spacing.R;
+import com.spacing.activity.MainActivity;
+import com.spacing.models.PopularCitiesDataStructure;
+import com.spacing.models.PopularLocalityDataStructure;
 
 import java.util.List;
 
 public class PopularPlacesAdapter extends RecyclerView.Adapter<PopularPlacesAdapter.ViewHolder> {
-    private List<PopularCitiesDataStructure> values;
+    private final MainActivity.GotUpdateLocationInterface gotUpdateLocationInterface;
+    private List<?> values;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -30,19 +33,10 @@ public class PopularPlacesAdapter extends RecyclerView.Adapter<PopularPlacesAdap
         }
     }
 
-    public void add(int position, PopularCitiesDataStructure item) {
-        values.add(position, item);
-        notifyItemInserted(position);
-    }
-
-    public void remove(int position) {
-        values.remove(position);
-        notifyItemRemoved(position);
-    }
-
     // Provide a suitable constructor (depends on the kind of dataset)
-    public PopularPlacesAdapter(List<PopularCitiesDataStructure> myDataset) {
+    public PopularPlacesAdapter(List<?> myDataset, MainActivity.GotUpdateLocationInterface gotUpdateLocationInterface) {
         values = myDataset;
+        this.gotUpdateLocationInterface = gotUpdateLocationInterface;
     }
 
     // Create new views (invoked by the layout manager)
@@ -62,14 +56,19 @@ public class PopularPlacesAdapter extends RecyclerView.Adapter<PopularPlacesAdap
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
+        String name;
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final PopularCitiesDataStructure item = values.get(position);
-        holder.txtName.setText(item.getCitynName());
+        if (values.get(position).getClass() == PopularCitiesDataStructure.class) {
+            name = ((PopularCitiesDataStructure) values.get(position)).getCitynName();
+        } else {
+            name = ((PopularLocalityDataStructure) values.get(position)).getLocalityName();
+        }
+        holder.txtName.setText(name);
         holder.txtName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                remove(position);
+                gotUpdateLocationInterface.onUpdated(name);
             }
         });
 

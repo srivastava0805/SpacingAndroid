@@ -101,6 +101,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview_selectcity_lookingforrent" />
 
+
+
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textview_selectcity_usemylocation"
             android:layout_width="match_parent"
@@ -140,6 +143,19 @@
             android:layout_marginStart="@dimen/default_25dp"
             android:layout_marginTop="@dimen/default_5dp"
             android:layout_marginEnd="@dimen/default_25dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recylerview_selectcity_searchedcities"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/edittext_selectcity_searchcity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/default_25dp"
+            android:layout_marginTop="@dimen/default_5dp"
+            android:layout_marginEnd="@dimen/default_25dp"
+            android:visibility="gone"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
