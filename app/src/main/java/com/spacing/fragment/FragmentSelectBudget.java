@@ -72,8 +72,8 @@ public class FragmentSelectBudget extends Fragment {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((MainActivity)getActivity()).setStartBudget(textStartRangeBudget.getText().toString().replace("k","00"));
-                ((MainActivity)getActivity()).setEndBudget(textEndRangeBudget.getText().toString().replace("k","00"));
+                ((MainActivity)getActivity()).setStartBudget(textStartRangeBudget.getText().toString().replace("k","000"));
+                ((MainActivity)getActivity()).setEndBudget(textEndRangeBudget.getText().toString().replace("k","000"));
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.container_main, new FragmentSelectConfiguration());

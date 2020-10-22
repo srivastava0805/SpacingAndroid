@@ -14,14 +14,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.spacing.R;
 import com.spacing.models.AllDetail;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.Locale;
 
 public class PropertiesAdapter extends RecyclerView.Adapter<PropertiesAdapter.ViewHolder> {
+    private final List<AllDetail> properties;
     private Context mCtx;
 
     public PropertiesAdapter(Context ctx, List<AllDetail> properties) {
         this.mCtx = ctx;
+        this.properties = properties;
     }
 
     @NonNull
@@ -38,13 +42,22 @@ public class PropertiesAdapter extends RecyclerView.Adapter<PropertiesAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        for (int i = 0; i < 10; i++) {
+        AllDetail item = properties.get(position);
+        for (int i = 0; i < item.getPropertyImages().size(); i++) {
             //create imageview here and setbg
             ImageView imageView = new ImageView(mCtx);
-            imageView.setImageResource(R.drawable.ic_launcher_foreground);
+            Picasso.get()
+                    .load(item.getPropertyImages().get(i).getUrl())
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .into(imageView);
             holder.mLinearLayoutRowpropertyImagecontainer.addView(imageView,i);
-
         }
+
+        holder.mTextviewRowpropertyPrice.setText(String.format(Locale.ENGLISH,"%s %d", mCtx.getResources().getString(R.string.Rs), item.getBasicDetailId().getMothlyRent()));
+        holder.mTextviewRowpropertyCongiguration.setText(item.getBasicDetailId().getBhk());
+        holder.mTextviewRowpropertyAddress.setText(String.format("%s,%s", item.getLocationId().getLocality(), item.getLocationId().getCity())) ;
+        holder.mTextviewRowpropertyPropertysize.setText(String.format("%dSq.ft", item.getBasicDetailId().getBuildUpArea())) ;
+        holder.mTextviewRowpropertyPropertyaccessory.setText(item.getBasicDetailId().getFurnishedType()) ;
     }
 
 
@@ -72,6 +85,6 @@ public class PropertiesAdapter extends RecyclerView.Adapter<PropertiesAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return 2;
+        return properties.size();
     }
 }

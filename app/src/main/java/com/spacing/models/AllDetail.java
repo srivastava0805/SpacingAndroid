@@ -5,6 +5,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class AllDetail implements Serializable {
 
@@ -29,6 +30,8 @@ public class AllDetail implements Serializable {
     @SerializedName("isDecline")
     @Expose
     private Boolean isDecline;
+
+    private List<Img> propertyImages;
 
     public Integer getId() {
         return id;
@@ -86,4 +89,11 @@ public class AllDetail implements Serializable {
         this.isDecline = isDecline;
     }
 
+    public List<Img> getPropertyImages() {
+        return propertyImages;
+    }
+
+    public void setPropertyImages(List<Img> propertyImages) {
+        this.propertyImages = propertyImages;
+    }
 }

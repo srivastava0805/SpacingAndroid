@@ -19,6 +19,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.spacing.R;
+import com.spacing.SpacingApp;
 import com.spacing.activity.MainActivity;
 import com.spacing.activity.ViewPropertiesActivity;
 import com.spacing.models.SearchForPropertyResultsDataStruct;
@@ -153,7 +154,7 @@ public class FragmentSelectConfiguration extends Fragment {
         loadingCityProgressBar.setMessage(getString(R.string.wait__));
         loadingCityProgressBar.show();
         Call<SearchForPropertyResultsDataStruct> call = apiInterface.diGetPropertiesByFilter(ctx.getcity(), ctx.getLocality(),
-                ctx.getEndBudget(), "2Bhk");
+                ctx.getEndBudget(), "2 Bhk");
         call.enqueue(new Callback<SearchForPropertyResultsDataStruct>() {
             @Override
             public void onResponse(Call<SearchForPropertyResultsDataStruct> call, Response<SearchForPropertyResultsDataStruct> response) {
@@ -161,20 +162,22 @@ public class FragmentSelectConfiguration extends Fragment {
                 if (response.isSuccessful() && response.code() == 200) {
                     searchResultsForPropertyQuery = response.body();
                     if (searchResultsForPropertyQuery.getAllDetails().size() > 0) {
-                        startActivity(new Intent(getActivity(), ViewPropertiesActivity.class));
+                        Intent intent = new Intent(getActivity(),ViewPropertiesActivity.class);
+                        intent.putExtra(SpacingApp.PROPERTIES_DATA,searchResultsForPropertyQuery);
+                        startActivity(intent);
                         getActivity().finish();
-                    } else {
-                        new AlertDialog.Builder(getActivity())
-                                .setTitle("No Data")
-                                .setMessage(getResources().getString(R.string.no_matching_property))
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        dialog.dismiss();
-                                    }
-                                })
-                                .setIcon(android.R.drawable.ic_dialog_alert)
-                                .show();
                     }
+                } else if (response.code() == 204) {
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("No Data")
+                            .setMessage(getResources().getString(R.string.no_matching_property))
+                            .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.dismiss();
+                                }
+                            })
+                            .setIcon(android.R.drawable.ic_dialog_alert)
+                            .show();
                 } else {
                     Toast.makeText(getActivity(), "Something went wrong, try again later", Toast.LENGTH_SHORT).show();
                 }

@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:onClick="blockView"
     tools:context=".activity.MainActivity">
 
     <View
@@ -20,9 +21,9 @@
         android:id="@+id/imageview_selectcity_back"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_25dp"
         android:layout_marginTop="@dimen/default_25dp"
         android:onClick="onBackClicked"
-        android:layout_marginStart="@dimen/default_25dp"
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -121,9 +122,9 @@
                 android:id="@+id/textview_selectbudget_budgetendrange"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/_5k"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:ignore="MissingConstraints"
-                android:text="@string/_5k"/>
+                tools:ignore="MissingConstraints" />
 
             <com.jem.rubberpicker.RubberRangePicker
                 android:id="@+id/rangeSeekBar"

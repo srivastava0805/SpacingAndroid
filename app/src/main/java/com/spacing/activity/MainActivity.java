@@ -69,6 +69,10 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
         onBackPressed();
     }
 
+    public void blockView(View view) {
+
+    }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         String permission = permissions[0];
@@ -165,12 +169,12 @@ public class MainActivity extends AppCompatActivity implements LocationManager.L
         this.address = locality;
     }
 
-    public void setEndBudget(String startBudget) {
-        this.startBudget = startBudget;
+    public void setEndBudget(String endBudget) {
+        this.endBudget = endBudget;
     }
 
-    public void setStartBudget(String endBudget) {
-        this.endBudget = endBudget;
+    public void setStartBudget(String startBudget) {
+        this.startBudget = startBudget;
     }
 
     public String getStartBudget() {

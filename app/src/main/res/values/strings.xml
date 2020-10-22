@@ -53,4 +53,5 @@
     <string name="_3bhkplus">3Bhk+</string>
     <string name="no_matching_property">No matching property found, Try again with different filters</string>
     <string name="wait__">Please wait..</string>
+    <string name="Rs">\u20B9</string>
 </resources>
